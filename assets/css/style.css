@@ -488,8 +488,9 @@ body:not(.theme-light) :is(
 .footer__row a:hover { color: var(--accent); }
 
 /* ---------- 16. CASE STUDY PAGES ---------- */
-.cs-hero { min-height: 82svh; display: flex; flex-direction: column; justify-content: flex-end; padding-block: 160px 60px; position: relative; overflow: hidden; }
-.cs-hero__glow { position: absolute; z-index: 0; width: 60vw; height: 60vw; top: -20%; right: -15%; border-radius: 50%; filter: blur(100px); opacity: 0.4; background: radial-gradient(circle, var(--accent), transparent 62%); animation: drift 20s var(--ease-in-out) infinite alternate; }
+.cs-hero { min-height: 82svh; display: flex; flex-direction: column; justify-content: flex-end; padding-block: 160px 60px; position: relative; }
+/* Full-bleed, responsive header glow — spans the whole viewport width regardless of the 1280 content column */
+.cs-hero__glow { position: absolute; z-index: 0; top: 0; left: 50%; margin-left: -50vw; width: 100vw; height: 100%; pointer-events: none; filter: blur(60px); opacity: 0.42; background: radial-gradient(48vw 48vw at 84% -8%, var(--accent), transparent 60%); }
 .cs-hero__inner { position: relative; z-index: 2; }
 .cs-hero__num { font-family: var(--mono); color: var(--accent); font-size: 15px; letter-spacing: 0.1em; }
 .cs-hero__title { font-size: clamp(2.4rem, 8vw, 8rem); margin: 20px 0; text-transform: uppercase; text-wrap: balance; }
