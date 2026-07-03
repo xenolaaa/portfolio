@@ -198,8 +198,8 @@
     box.setAttribute("aria-label", "Image viewer");
     box.innerHTML =
       '<button class="lightbox__close" type="button" aria-label="Close image viewer">✕</button>' +
-      '<img class="lightbox__img" alt="" />' +
-      '<p class="lightbox__hint">Click image to zoom · Esc to close</p>';
+      '<img class="lightbox__img" alt="" draggable="false" />' +
+      '<p class="lightbox__hint">Click anywhere or press Esc to close</p>';
     document.body.appendChild(box);
 
     const big = box.querySelector(".lightbox__img");
@@ -210,13 +210,12 @@
       lastFocused = document.activeElement;
       big.src = src;
       big.alt = alt || "";
-      box.classList.remove("zoomed");
       box.classList.add("open");
       document.body.style.overflow = "hidden";
       closeBtn.focus();
     };
     const close = () => {
-      box.classList.remove("open", "zoomed");
+      box.classList.remove("open");
       document.body.style.overflow = "";
       if (lastFocused && lastFocused.focus) lastFocused.focus();
     };
@@ -224,13 +223,8 @@
     imgs.forEach(img => {
       img.addEventListener("click", () => open(img.currentSrc || img.src, img.alt));
     });
-    closeBtn.addEventListener("click", close);
-    box.addEventListener("click", (e) => { if (e.target === box) close(); });
-    big.addEventListener("click", (e) => {
-      e.stopPropagation();
-      box.classList.toggle("zoomed");
-      box.scrollTo(0, 0);
-    });
+    box.addEventListener("click", close);
+    closeBtn.addEventListener("click", (e) => { e.stopPropagation(); close(); });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && box.classList.contains("open")) close();
     });
