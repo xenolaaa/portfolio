@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <radialGradient id="g1" cx="82%" cy="22%" r="65%">
+      <stop offset="0%" stop-color="#ff2e97" stop-opacity="0.6"/>
+      <stop offset="55%" stop-color="#a855f7" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#08080b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="g2" cx="12%" cy="80%" r="55%">
+      <stop offset="0%" stop-color="#14f195" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#08080b" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1200" fill="#08080b"/>
+  <rect width="1200" height="1200" fill="url(#g1)"/>
+  <rect width="1200" height="1200" fill="url(#g2)"/>
+  <!-- content vertically centered in the 285–915 band so a 1200x630 center-crop frames it -->
+  <text x="80" y="395" font-family="'Space Mono', monospace" font-size="21" letter-spacing="3" fill="#ff2e97">(SHE/HER) — SENIOR PRODUCT DESIGNER &amp; UX ARCHITECT</text>
+  <text x="74" y="565" font-family="'Arial Black', sans-serif" font-weight="900" font-size="165" letter-spacing="-4" fill="#f4f4f6">LA</text>
+  <text x="76" y="700" font-family="'Arial Black', sans-serif" font-weight="900" font-size="112" letter-spacing="-2" fill="none" stroke="#f4f4f6" stroke-width="2">SCHAFFER</text>
+  <text x="80" y="805" font-family="'Space Grotesk', sans-serif" font-size="27" fill="#c9c9d0">10+ yrs · 130M+ reached · MS-HCI, Georgia Tech · Atlanta</text>
+  <circle cx="1090" cy="360" r="16" fill="#14f195"/>
+</svg>

@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Internal source files — kept locally, NOT published to the web
+*.key
+*.docx
+*.webp
+
+# Original image drops (superseded by the resized web-ready versions beside them)
+**/Screen Shot*
+**/6920*
+**/MC0[0-9].png
+**/3de8cc*

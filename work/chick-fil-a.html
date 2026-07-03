@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-accent="pink">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chick-fil-A — Order Share · La Schaffer</title>
+  <meta name="description" content="Designing 'Order Share' — a delegate-pickup feature for the Chick-fil-A app used by 1.8M+ people a week. A case study by La Schaffer." />
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="theme-light" data-accent="pink">
+  <a class="skip" href="#overview">Skip to content</a>
+
+  <header class="nav">
+    <a class="nav__brand" href="../index.html" aria-label="La Schaffer — home">La Schaffer<span class="dot">.</span></a>
+    <nav class="nav__links" aria-label="Primary">
+      <a class="nav-work" href="../index.html#work">Work</a>
+      <a class="nav-about" href="../index.html#about">About</a>
+      <a href="../assets/la-schaffer-resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      <a class="btn btn--accent" href="../index.html#contact" data-magnetic="0.25">Let’s talk</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="cs-hero container">
+      <div class="cs-hero__glow" aria-hidden="true"></div>
+      <div class="cs-hero__inner">
+        <p class="cs-hero__num reveal">01 / Case Study — Consumer Mobile</p>
+        <h1 class="display cs-hero__title reveal reveal-d1">Order Share</h1>
+        <p class="cs-hero__sub reveal reveal-d2">A delegate-pickup feature for the Chick-fil-A app that tells the app — and the Team Member — exactly who’s collecting an order.</p>
+      </div>
+    </section>
+
+    <dl class="cs-meta">
+      <div class="cs-meta__item"><dt>My Role</dt><dd>UX Strategy · Visual Design · Design-System Mgmt</dd></div>
+      <div class="cs-meta__item"><dt>Client · Year</dt><dd>Chick-fil-A · 2025</dd></div>
+      <div class="cs-meta__item"><dt>Platform</dt><dd>iOS, mobile web &amp; desktop</dd></div>
+      <div class="cs-meta__item"><dt>Scale</dt><dd>1.8M+ weekly app users</dd></div>
+    </dl>
+
+    <section class="cs-section container" id="overview">
+      <div class="cs-block reveal">
+        <p class="cs-block__label">01 — Overview</p>
+        <div class="cs-block__body">
+          <p class="lead">The Chick-fil-A app is the front door to mobile ordering for more than <strong>1.8 million people a week</strong> — but it had a blind spot: it assumed the person who placed an order was the person picking it up. In reality, people order for coworkers, family, and friends constantly.</p>
+          <p>I designed <strong>Order Share</strong> — a feature that lets a guest hand pickup off to someone else (a “Delegate”), and gives restaurant Team Members the information they need to get the right food to the right person.</p>
+        </div>
+      </div>
+
+      <figure class="cs-figure reveal">
+        <img class="cs-img" src="../assets/img/chick-fil-a/share-status.png" alt="Order Share status screens — share link not opened and share link opened" loading="lazy" />
+        <figcaption>The heart of Order Share — a shareable pickup with clear, real-time status for both the customer and the delegate.</figcaption>
+      </figure>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="cs-section container">
+      <div class="cs-block reveal">
+        <p class="cs-block__label">02 — The Challenge</p>
+        <div class="cs-block__body">
+          <h3>One order, two people, three pickup paths</h3>
+          <p>Order fulfillment looks simple until you map it. A single order can be collected via mobile drive-thru, curbside, or in-restaurant — and each path has its own verification cues. When the person ordering and the person picking up are different, those cues break down: the app couldn’t tell them apart, which created confusion for guests and Team Members alike.</p>
+          <p>The task was to add delegation <em>without</em> adding friction, inside a mature app used at massive scale — where every new pattern has to fit cleanly with everything that’s already there.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="cs-section container">
+      <div class="cs-block reveal">
+        <p class="cs-block__label">03 — Approach</p>
+        <div class="cs-block__body">
+          <h3>Design inside the system, for every path</h3>
+          <p>I worked the problem end-to-end with product and the internal design team, treating the design system as a partner rather than a constraint.</p>
+          <ul class="cs-list">
+            <li><span class="n">1</span><span><strong>Mapped the existing journeys.</strong> Charted the current ordering and pickup flows and pinpointed exactly where verification differs across drive-thru, curbside, and in-store.</span></li>
+            <li><span class="n">2</span><span><strong>Learned the design system cold.</strong> Studied Chick-fil-A’s robust Figma system — components, tokens, and variants — so the feature would extend it, not fight it.</span></li>
+            <li><span class="n">3</span><span><strong>Designed the delegate handoff.</strong> A toggle in each pickup flow: light-touch name entry for the customer, expanded details for the delegate.</span></li>
+            <li><span class="n">4</span><span><strong>Made confirmation consistent.</strong> Unified patterns for customers, delegates, and Team Members across app, mobile web, and desktop — annotated for the systems team.</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <figure class="cs-figure reveal">
+        <img class="cs-img" src="../assets/img/chick-fil-a/journey-map.png" alt="Host and delegate journey map across mobile drive-thru, curbside, and carryout" loading="lazy" />
+        <figcaption>Every path mapped — the <strong>host</strong> and <strong>delegate</strong> experiences, across mobile drive-thru, curbside, and carryout.</figcaption>
+      </figure>
+      <figure class="cs-figure reveal">
+        <img class="cs-img" src="../assets/img/chick-fil-a/experiences.png" alt="Customer-side and delegate-side experience flows for each pickup method" loading="lazy" />
+        <figcaption>Customer-side and delegate-side experiences, designed in parallel for each pickup method.</figcaption>
+      </figure>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="cs-section container">
+      <div class="cs-block reveal">
+        <p class="cs-block__label">04 — The Solution</p>
+        <div class="cs-block__body">
+          <h3>A delegate prompt that fits every path</h3>
+          <p>Order Share adds a delegate prompt to each pickup method, asking the right amount of information at the right moment — a name from the customer, a little more from the person collecting. Confirmation patterns stay consistent across user types and devices, so no one is left guessing.</p>
+          <p>To support it, I created new design-system component variants — modules, icons, and imagery — that other teams can reuse for future enhancements, so the feature strengthens the system it lives in.</p>
+        </div>
+      </div>
+
+      <figure class="cs-figure reveal">
+        <img class="cs-img" src="../assets/img/chick-fil-a/order-review.png" alt="Order review variants with the delegate toggle across curbside and carryout" loading="lazy" />
+        <figcaption>Order review, with the delegate toggle — one consistent pattern across curbside and carryout.</figcaption>
+      </figure>
+      <figure class="cs-figure reveal">
+        <img class="cs-img" src="../assets/img/chick-fil-a/delegate-flow.png" alt="Delegate onboarding: welcome, name, and vehicle details for curbside pickup" loading="lazy" />
+        <figcaption>The delegate’s side — a guided handoff that gathers just enough to make curbside pickup work.</figcaption>
+      </figure>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="cs-section container">
+      <div class="cs-block reveal" style="margin-bottom:40px">
+        <p class="cs-block__label">05 — Impact</p>
+        <div class="cs-block__body">
+          <h3>Less confusion, cleaner handoffs, a stronger system</h3>
+          <p>Order Share made it easy for guests to delegate pickup responsibilities and gave Team Members the information they needed upfront — reducing identity confusion and streamlining handoffs across every pickup option.</p>
+        </div>
+      </div>
+      <div class="cs-impact reveal">
+        <div class="stat"><p class="stat__num"><span data-count="1.8">0</span><span class="u">M+</span></p><p class="stat__label">Weekly users on the platform</p></div>
+        <div class="stat"><p class="stat__num"><span data-count="3">0</span></p><p class="stat__label">Pickup paths supported — drive-thru, curbside, in-store</p></div>
+        <div class="stat"><p class="stat__num accent-text">New</p><p class="stat__label">Reusable design-system variants shipped</p></div>
+      </div>
+    </section>
+
+    <hr class="divider" />
+
+    <section class="cs-section container">
+      <div class="cs-block reveal">
+        <p class="cs-block__label">06 — Reflection</p>
+        <div class="cs-block__body">
+          <p class="lead">Designing for fulfillment at this scale sharpened something I already believed: the most valuable UX is often invisible. Nobody screenshots a pickup flow for being beautiful — they just get the right food, handed to the right person, without thinking about it. Getting to “without thinking about it,” across three pickup paths and millions of weekly guests, was the whole job.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="cs-next" aria-label="Next project">
+    <a class="container" href="amex-travel.html">
+      <span class="cs-next__label">Next<br>project</span>
+      <span class="cs-next__title">Amex Travel →</span>
+      <span class="cs-next__arrow" aria-hidden="true">↗</span>
+    </a>
+  </nav>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <span>© <span data-year>2026</span> Lauren (La) Schaffer</span>
+      <a href="../index.html#work">All work</a>
+      <a href="../index.html#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
