@@ -1,0 +1,37 @@
+<svg viewBox="0 0 1584 396" width="1584" height="396" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="lc-t lc-d">
+  <title id="lc-t">La Schaffer — Senior Product Designer and UX Architect</title>
+  <desc id="lc-d">LinkedIn cover: dark canvas with neon glows and, right-aligned, the name La Schaffer above the line "Designing experiences that tell a story, solve the problem, feel effortless, include everyone, surprise and delight."</desc>
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&amp;family=Space+Grotesk:wght@400;500&amp;display=swap');
+      text { font-family: 'Space Grotesk', system-ui, sans-serif; }
+      .display { font-family: 'Syne', 'Arial Black', sans-serif; font-weight: 800; }
+    </style>
+    <radialGradient id="lcPink" cx="1584" cy="-40" r="740" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff2e97" stop-opacity="0.5"/><stop offset="1" stop-color="#ff2e97" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lcPurple" cx="1680" cy="440" r="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#a855f7" stop-opacity="0.46"/><stop offset="1" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lcCyan" cx="1500" cy="210" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.30"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lcGreen" cx="60" cy="-80" r="520" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#14f195" stop-opacity="0.16"/><stop offset="1" stop-color="#14f195" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1584" height="396" fill="#08080b"/>
+  <rect width="1584" height="396" fill="url(#lcPink)"/>
+  <rect width="1584" height="396" fill="url(#lcPurple)"/>
+  <rect width="1584" height="396" fill="url(#lcCyan)"/>
+  <rect width="1584" height="396" fill="url(#lcGreen)"/>
+
+  <text x="1504" y="104" text-anchor="end" font-size="18" letter-spacing="4" fill="#c9c9d1" font-weight="500">SENIOR PRODUCT DESIGNER · UX ARCHITECT</text>
+  <text x="1504" y="216" text-anchor="end" class="display" font-size="100" fill="#ffffff">La Schaffer<tspan fill="#22d3ee">.</tspan></text>
+  <text x="1504" y="278" text-anchor="end" font-size="22" fill="#d3d3da">Designing experiences that</text>
+  <text x="1504" y="306" text-anchor="end" font-size="22" font-weight="500">
+    <tspan fill="#a855f7">tell a story</tspan><tspan fill="#565660">   ·   </tspan><tspan fill="#ff2e97">solve the problem</tspan><tspan fill="#565660">   ·   </tspan><tspan fill="#ff6a2b">feel effortless</tspan><tspan fill="#565660">   ·   </tspan><tspan fill="#14f195">include everyone</tspan><tspan fill="#565660">   ·   </tspan><tspan fill="#22d3ee">surprise &amp; delight</tspan>
+  </text>
+  <text x="1504" y="362" text-anchor="end" font-size="18.5" letter-spacing="1.5" fill="#ffffff" font-weight="500">laschaffer.com</text>
+</svg>
