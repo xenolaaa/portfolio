@@ -125,7 +125,7 @@
       const io = new IntersectionObserver((entries) => {
         entries.forEach(e => { if (e.isIntersecting) { run(e.target); io.unobserve(e.target); } });
       }, { threshold: 0.6 });
-      counters.forEach(el => io.observe(el));
+      counters.forEach(el => { if (!reduce) el.textContent = "0"; io.observe(el); });  // JS resets to 0 (no-JS keeps the real fallback number)
     } else counters.forEach(run);
   }
 
