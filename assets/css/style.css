@@ -378,12 +378,23 @@ body:not(.theme-light) :is(
 /* Persistent project thumbnail (swap the .ph for an <img> later) */
 .work-item__media {
   grid-area: media; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; border: 1px solid var(--line);
+  position: relative;
   transform: scale(0.95); filter: saturate(0.8) brightness(0.92);
   transition: transform .55s var(--ease), filter .45s;
 }
 .work-item__media .ph { border-radius: 12px; width: 100%; height: 100%; }
 .work-item__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .work-item:hover .work-item__media { transform: scale(1.02); filter: saturate(1.15) brightness(1); }
+
+/* Accent veil over each thumbnail, lifted on hover (hover-capable devices only) */
+@media (hover: hover) {
+  .work-item__media::after {
+    content: ""; position: absolute; inset: 0; z-index: 1;
+    background: var(--accent); opacity: 0.62;
+    transition: opacity .5s var(--ease); pointer-events: none;
+  }
+  .work-item:hover .work-item__media::after { opacity: 0; }
+}
 
 .work-item__cta { grid-area: cta; display: inline-flex; align-items: center; justify-content: center; width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--fg); transition: background .4s, color .4s, border-color .4s, transform .5s var(--ease); flex-shrink: 0; }
 .work-item:hover .work-item__cta { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); transform: rotate(45deg); }
