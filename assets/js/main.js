@@ -52,12 +52,21 @@
       });
       document.body.appendChild(overlay);
 
+      const menuBg = () => Array.from(document.body.children).filter(el => el !== overlay && el !== nav);
       const setOpen = (open) => {
+        const wasOpen = nav.classList.contains("menu-open");
         nav.classList.toggle("menu-open", open);
         overlay.classList.toggle("open", open);
         document.body.style.overflow = open ? "hidden" : "";
         toggle.setAttribute("aria-expanded", String(open));
         toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        if (open) {
+          menuBg().forEach(el => el.setAttribute("inert", ""));      // hide/trap background
+          const first = overlay.querySelector("a"); if (first) first.focus();
+        } else {
+          menuBg().forEach(el => el.removeAttribute("inert"));
+          if (wasOpen) toggle.focus();                                // return focus to the opener
+        }
       };
       toggle.addEventListener("click", () => setOpen(!nav.classList.contains("menu-open")));
       overlay.querySelectorAll("a").forEach(a => a.addEventListener("click", () => setOpen(false)));
@@ -209,6 +218,7 @@
     const HINT_ZOOM = "Click image to fit · Esc to close";
     let lastFocused = null;
 
+    const bgEls = () => Array.from(document.body.children).filter(el => el !== box);
     const open = (src, alt) => {
       lastFocused = document.activeElement;
       big.src = src;
@@ -217,11 +227,13 @@
       hint.textContent = HINT_FIT;
       box.classList.add("open");
       document.body.style.overflow = "hidden";
+      bgEls().forEach(el => el.setAttribute("inert", ""));   // trap focus + hide bg from AT
       closeBtn.focus();
     };
     const close = () => {
       box.classList.remove("open", "zoomed");
       document.body.style.overflow = "";
+      bgEls().forEach(el => el.removeAttribute("inert"));
       if (lastFocused && lastFocused.focus) lastFocused.focus();
     };
     const toggleZoom = () => {
@@ -235,7 +247,15 @@
     };
 
     imgs.forEach(img => {
-      img.addEventListener("click", () => open(img.currentSrc || img.src, img.alt));
+      // make each zoomable image a keyboard-operable control
+      img.tabIndex = 0;
+      img.setAttribute("role", "button");
+      img.setAttribute("aria-label", (img.alt ? img.alt + " — " : "") + "view larger");
+      const openThis = () => open(img.currentSrc || img.src, img.alt);
+      img.addEventListener("click", openThis);
+      img.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openThis(); }
+      });
     });
     big.addEventListener("click", (e) => { e.stopPropagation(); toggleZoom(); });
     box.addEventListener("click", (e) => { if (e.target === box) close(); });

@@ -133,7 +133,7 @@ body::after {
 .section { padding-block: clamp(80px, 12vh, 160px); position: relative; }
 .eyebrow {
   font-family: var(--mono); font-size: 14px; letter-spacing: 0.16em;
-  text-transform: uppercase; color: var(--muted);
+  text-transform: uppercase; color: var(--muted); font-weight: 400;
   display: inline-flex; align-items: center; gap: 10px;
 }
 .eyebrow::before {
@@ -523,7 +523,7 @@ body:not(.theme-light) :is(
 .cs-block__label { font-family: var(--mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); position: sticky; top: 100px; }
 .cs-block__body p { color: var(--text-2); max-width: 66ch; }
 .cs-block__body p + p { margin-top: 20px; }
-.cs-block__body h3 { font-size: clamp(1.6rem, 4vw, 2.6rem); text-transform: uppercase; margin-bottom: 22px; }
+.cs-block__body h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); text-transform: uppercase; margin-bottom: 22px; }
 .cs-block__body .lead { color: var(--fg); }
 
 .cs-list { margin-top: 24px; display: grid; gap: 2px; }
