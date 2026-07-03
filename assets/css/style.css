@@ -24,6 +24,7 @@
   --orange:    #ff6a2b;
   --green:     #14f195;
   --purple:    #a855f7;
+  --cyan:      #22d3ee;
 
   /* Default accent (overridden per-project via [data-accent]) */
   --accent:    var(--pink);
@@ -50,6 +51,7 @@
 [data-accent="orange"] { --accent: var(--orange); }
 [data-accent="green"]  { --accent: var(--green); }
 [data-accent="purple"] { --accent: var(--purple); }
+[data-accent="cyan"]   { --accent: var(--cyan); }
 
 /* Light theme — flips the whole palette for big black/white contrast.
    Put class="band theme-light" on a full-width <section>, with an inner .container. */
@@ -69,6 +71,7 @@
   --orange: #b23c0a;
   --green:  #0a6b4c;
   --purple: #6d28d9;
+  --cyan:   #0e7490;
   --accent-ink: #ffffff;                 /* white text on deep-accent buttons */
   --nav-bg:     rgba(244,243,238,0.82);  /* light translucent nav on white pages */
   --overlay-bg: rgba(244,243,238,0.98);
