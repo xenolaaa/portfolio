@@ -372,7 +372,7 @@ body:not(.theme-light) :is(
 .work-item__main { grid-area: main; min-width: 0; }
 .work-item__title {
   font-family: var(--display); font-weight: 800; text-transform: uppercase;
-  font-size: clamp(1.8rem, 4.8vw, 3.9rem); line-height: 0.98; letter-spacing: -0.02em;
+  font-size: clamp(1.6rem, 4vw, 3.2rem); line-height: 0.98; letter-spacing: -0.02em;
   transition: color .4s, transform .5s var(--ease);
   color: var(--fg);
 }
