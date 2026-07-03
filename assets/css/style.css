@@ -519,7 +519,21 @@ body:not(.theme-light) :is(
 
 .cs-figure { margin-block: clamp(30px, 5vh, 60px); }
 .cs-figure figcaption { font-family: var(--mono); font-size: 12.5px; color: var(--muted); margin-top: 14px; letter-spacing: 0.03em; }
-.cs-img { width: 100%; height: auto; display: block; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 18px 44px rgba(10,10,15,0.10); }
+.cs-img { width: 100%; height: auto; display: block; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: 0 18px 44px rgba(10,10,15,0.10); cursor: zoom-in; transition: box-shadow .3s var(--ease), transform .3s var(--ease); }
+.cs-img:hover { box-shadow: 0 24px 60px rgba(10,10,15,0.20); transform: translateY(-2px); }
+
+/* ---------- LIGHTBOX — click any case-study image to view it full size ---------- */
+.lightbox { position: fixed; inset: 0; z-index: 9990; display: flex; align-items: center; justify-content: center; padding: clamp(16px, 4vw, 60px); background: rgba(9,9,12,0.94); opacity: 0; visibility: hidden; transition: opacity .3s var(--ease), visibility .3s; cursor: zoom-out; }
+.lightbox.open { opacity: 1; visibility: visible; }
+.lightbox__img { max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: 8px; box-shadow: 0 30px 90px rgba(0,0,0,0.55); transform: scale(.97); transition: transform .3s var(--ease); cursor: zoom-in; }
+.lightbox.open .lightbox__img { transform: scale(1); }
+.lightbox.zoomed { align-items: flex-start; justify-content: flex-start; overflow: auto; cursor: default; }
+.lightbox.zoomed .lightbox__img { max-width: none; max-height: none; transform: none; cursor: zoom-out; }
+.lightbox__close { position: fixed; top: 18px; right: 22px; width: 46px; height: 46px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.28); background: rgba(255,255,255,0.10); color: #fff; font-size: 17px; line-height: 1; cursor: pointer; display: grid; place-items: center; transition: background .2s, transform .3s var(--ease); }
+.lightbox__close:hover { background: rgba(255,255,255,0.2); transform: rotate(90deg); }
+.lightbox__hint { position: fixed; bottom: 18px; left: 50%; transform: translateX(-50%); font-family: var(--mono); font-size: 11px; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(255,255,255,0.55); pointer-events: none; transition: opacity .2s; }
+.lightbox.zoomed .lightbox__hint { opacity: 0; }
+@media (prefers-reduced-motion: reduce) { .lightbox, .lightbox__img, .lightbox__close, .cs-img { transition: none; } .lightbox__img { transform: none; } .cs-img:hover { transform: none; } }
 .cs-figs-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; align-items: start; }
 @media (max-width: 720px){ .cs-figs-2 { grid-template-columns: 1fr; } }
 

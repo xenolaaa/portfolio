@@ -164,7 +164,7 @@
       requestAnimationFrame(loop);
     };
     loop();
-    const hoverSel = "a, button, [data-magnetic], .work-item, input, textarea";
+    const hoverSel = "a, button, [data-magnetic], .work-item, input, textarea, .cs-img";
     document.addEventListener("mouseover", (e) => { if (e.target.closest(hoverSel)) ring.classList.add("hover"); });
     document.addEventListener("mouseout", (e) => { if (e.target.closest(hoverSel)) ring.classList.remove("hover"); });
     document.addEventListener("mousedown", () => ring.classList.add("down"));
@@ -183,6 +183,56 @@
         li.style.color = `var(${palette[Math.floor(Math.random() * palette.length)]})`;
       });
       li.addEventListener("mouseleave", () => { li.style.color = ""; });
+    });
+  })();
+
+  /* ---------- LIGHTBOX: click any case-study image to view it full size ---------- */
+  (() => {
+    const imgs = $$(".cs-img");
+    if (!imgs.length) return;
+
+    const box = document.createElement("div");
+    box.className = "lightbox";
+    box.setAttribute("role", "dialog");
+    box.setAttribute("aria-modal", "true");
+    box.setAttribute("aria-label", "Image viewer");
+    box.innerHTML =
+      '<button class="lightbox__close" type="button" aria-label="Close image viewer">✕</button>' +
+      '<img class="lightbox__img" alt="" />' +
+      '<p class="lightbox__hint">Click image to zoom · Esc to close</p>';
+    document.body.appendChild(box);
+
+    const big = box.querySelector(".lightbox__img");
+    const closeBtn = box.querySelector(".lightbox__close");
+    let lastFocused = null;
+
+    const open = (src, alt) => {
+      lastFocused = document.activeElement;
+      big.src = src;
+      big.alt = alt || "";
+      box.classList.remove("zoomed");
+      box.classList.add("open");
+      document.body.style.overflow = "hidden";
+      closeBtn.focus();
+    };
+    const close = () => {
+      box.classList.remove("open", "zoomed");
+      document.body.style.overflow = "";
+      if (lastFocused && lastFocused.focus) lastFocused.focus();
+    };
+
+    imgs.forEach(img => {
+      img.addEventListener("click", () => open(img.currentSrc || img.src, img.alt));
+    });
+    closeBtn.addEventListener("click", close);
+    box.addEventListener("click", (e) => { if (e.target === box) close(); });
+    big.addEventListener("click", (e) => {
+      e.stopPropagation();
+      box.classList.toggle("zoomed");
+      box.scrollTo(0, 0);
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && box.classList.contains("open")) close();
     });
   })();
 
