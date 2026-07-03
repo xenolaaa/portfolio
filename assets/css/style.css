@@ -377,7 +377,7 @@ body:not(.theme-light) :is(
 
 /* Persistent project thumbnail (swap the .ph for an <img> later) */
 .work-item__media {
-  grid-area: media; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden;
+  grid-area: media; aspect-ratio: 16/10; border-radius: 12px; overflow: hidden; border: 1px solid var(--line);
   transform: scale(0.95); filter: saturate(0.8) brightness(0.92);
   transition: transform .55s var(--ease), filter .45s;
 }
