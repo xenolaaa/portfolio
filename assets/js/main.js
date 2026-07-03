@@ -173,6 +173,19 @@
     document.addEventListener("mouseenter", () => { ring.style.opacity = "1"; dot.style.opacity = "1"; });
   }
 
+  /* ---------- CLIENT WALL: random accent color on hover ---------- */
+  (() => {
+    const names = $$(".work-more__logos li");
+    if (!names.length) return;
+    const palette = ["--pink", "--orange", "--green", "--purple"];
+    names.forEach((li) => {
+      li.addEventListener("mouseenter", () => {
+        li.style.color = `var(${palette[Math.floor(Math.random() * palette.length)]})`;
+      });
+      li.addEventListener("mouseleave", () => { li.style.color = ""; });
+    });
+  })();
+
   /* ---------- SMOOTH ANCHOR SCROLL (respects reduce) ---------- */
   $$('a[href^="#"]').forEach(a => {
     a.addEventListener("click", (e) => {
