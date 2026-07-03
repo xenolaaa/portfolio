@@ -477,7 +477,7 @@ body:not(.theme-light) :is(
 .contact__big { font-family: var(--display); font-weight: 800; text-transform: uppercase; font-size: clamp(2.6rem, 12vw, 9rem); line-height: 0.9; letter-spacing: -0.03em; }
 .contact__big a { transition: color .3s; display: inline-block; }
 .contact__big a:hover { color: var(--accent); }
-.contact__links { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: center; margin-top: 44px; font-family: var(--mono); font-size: 15px; }
+.contact__links { display: flex; flex-wrap: wrap; gap: 14px 30px; justify-content: center; margin-top: 44px; font-family: var(--mono); font-size: 17px; }
 .contact__links a { color: var(--muted); transition: color .3s; }
 .contact__links a:hover { color: var(--fg); }
 
