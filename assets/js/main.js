@@ -10,6 +10,19 @@
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
 
+  /* ---------- ANALYTICS — Google Analytics 4 (loads on every page) ---------- */
+  (() => {
+    const GA_ID = "G-S683E6HDCX";
+    const s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag("js", new Date());
+    window.gtag("config", GA_ID);
+  })();
+
   /* ---------- YEAR ---------- */
   $$("[data-year]").forEach(el => (el.textContent = new Date().getFullYear()));
 
