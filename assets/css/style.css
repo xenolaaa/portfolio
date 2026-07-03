@@ -293,9 +293,9 @@ body:not(.theme-light) :is(
 @keyframes hueSlide { to { background-position: 100% 0; } }
 .hero__role {
   margin-top: clamp(20px, 4vh, 40px);
-  display: flex; flex-direction: column; align-items: flex-start; gap: 8px;
+  display: flex; flex-direction: column; align-items: flex-start; gap: 0;
 }
-.hero__role .role-main { font-family: var(--display); font-weight: 700; font-size: clamp(1.3rem, 3vw, 2.3rem); text-transform: uppercase; }
+.hero__role .role-main { font-family: var(--display); font-weight: 700; font-size: clamp(1.3rem, 3vw, 2.3rem); text-transform: uppercase; line-height: 1.05; }
 .hero__role .rotator { color: var(--accent); }
 .hero__desc { margin-top: clamp(24px, 4vh, 44px); }
 .hero__cta { margin-top: clamp(30px, 5vh, 56px); display: flex; flex-wrap: wrap; gap: 16px; }
