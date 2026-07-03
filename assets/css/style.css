@@ -251,7 +251,7 @@ body:not(.theme-light) :is(
 .nav-overlay a:hover, .nav-overlay a:focus-visible { color: var(--accent); }
 
 @media (max-width: 720px) {
-  .nav__links { display: none; }
+  .js .nav__links { display: none; }   /* only hide the inline links when JS can provide the hamburger menu */
   .nav__toggle { display: flex; }
 }
 @media (min-width: 721px) { .nav-overlay { display: none; } }
@@ -580,7 +580,7 @@ body:not(.theme-light) :is(
 @media (hover: none), (pointer: coarse) { .cursor, .cursor__dot { display: none; } }
 
 /* ---------- 18. REVEAL ANIMATIONS ---------- */
-.reveal { opacity: 0; transform: translateY(34px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js .reveal { opacity: 0; transform: translateY(34px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
 .reveal.in { opacity: 1; transform: none; }
 .reveal-d1 { transition-delay: .08s; }
 .reveal-d2 { transition-delay: .16s; }
@@ -588,7 +588,7 @@ body:not(.theme-light) :is(
 .reveal-d4 { transition-delay: .32s; }
 
 .mask-line { overflow: hidden; }
-.mask-line > * { display: block; transform: translateY(105%); transition: transform 1s var(--ease); }
+.js .mask-line > * { display: block; transform: translateY(105%); transition: transform 1s var(--ease); }
 .mask-line.in > * { transform: none; }
 
 /* ---------- 19. UTILITIES ---------- */
