@@ -605,4 +605,5 @@ body:not(.theme-light) :is(
   .reveal, .mask-line > * { opacity: 1 !important; transform: none !important; }
   .hero__glow, .cs-hero__glow { animation: none; }
   .cursor, .cursor__dot { display: none; }
+  .marquee { display: none; }   /* the duplicated track only makes sense while scrolling — hide it when motion is off */
 }
