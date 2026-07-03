@@ -199,31 +199,46 @@
     box.innerHTML =
       '<button class="lightbox__close" type="button" aria-label="Close image viewer">✕</button>' +
       '<img class="lightbox__img" alt="" draggable="false" />' +
-      '<p class="lightbox__hint">Click anywhere or press Esc to close</p>';
+      '<p class="lightbox__hint"></p>';
     document.body.appendChild(box);
 
     const big = box.querySelector(".lightbox__img");
     const closeBtn = box.querySelector(".lightbox__close");
+    const hint = box.querySelector(".lightbox__hint");
+    const HINT_FIT = "Click image to zoom · Esc to close";
+    const HINT_ZOOM = "Click image to fit · Esc to close";
     let lastFocused = null;
 
     const open = (src, alt) => {
       lastFocused = document.activeElement;
       big.src = src;
       big.alt = alt || "";
+      box.classList.remove("zoomed");
+      hint.textContent = HINT_FIT;
       box.classList.add("open");
       document.body.style.overflow = "hidden";
       closeBtn.focus();
     };
     const close = () => {
-      box.classList.remove("open");
+      box.classList.remove("open", "zoomed");
       document.body.style.overflow = "";
       if (lastFocused && lastFocused.focus) lastFocused.focus();
+    };
+    const toggleZoom = () => {
+      const zoomed = box.classList.toggle("zoomed");
+      hint.textContent = zoomed ? HINT_ZOOM : HINT_FIT;
+      if (zoomed) {
+        // open on the middle of the enlarged image, not a corner
+        box.scrollLeft = (box.scrollWidth - box.clientWidth) / 2;
+        box.scrollTop = (box.scrollHeight - box.clientHeight) / 2;
+      }
     };
 
     imgs.forEach(img => {
       img.addEventListener("click", () => open(img.currentSrc || img.src, img.alt));
     });
-    box.addEventListener("click", close);
+    big.addEventListener("click", (e) => { e.stopPropagation(); toggleZoom(); });
+    box.addEventListener("click", (e) => { if (e.target === box) close(); });
     closeBtn.addEventListener("click", (e) => { e.stopPropagation(); close(); });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape" && box.classList.contains("open")) close();
