@@ -14,7 +14,6 @@ Everything below is written for a non-developer. Take it one section at a time.
 portfolio/
 ├─ index.html                     ← the home page (hero, fast facts, work, about, contact)
 ├─ work/                          ← one page per case study
-│  ├─ chick-fil-a.html
 │  ├─ amex-travel.html
 │  ├─ marta.html
 │  ├─ arthritis-foundation.html
@@ -45,16 +44,16 @@ The site is **live-ready as-is**, but these swaps take it from "great template" 
 | What | Where | How |
 |---|---|---|
 | **Your photo** | About section | Save a portrait as `assets/img/portrait.jpg`, then in `index.html` search for `DROP YOUR PORTRAIT` and follow the note. |
-| **Project images** | Each case study | Every gray placeholder tells you the exact filename to save (e.g. `assets/img/cfa-hero.png`). Drop images into `assets/img/` and they appear. Skip any you can't show for NDA reasons — the design looks finished without them. |
+| **Project images** | Each case study | Every gray placeholder tells you the exact filename to save (e.g. `assets/img/amex-hero.png`). Drop images into `assets/img/` and they appear. Skip any you can't show for NDA reasons — the design looks finished without them. |
 | **Real outcome metrics** | Case studies | Search each file for `Add %` / `Add #` and replace with real numbers when you can share them. The pink dashed boxes (`callout`) are private notes to yourself — delete them before publishing. |
 | **LinkedIn link** | `index.html` | Search for `linkedin.com/` and paste your real profile URL. |
 | **Résumé** | already wired up | Replace `assets/la-schaffer-resume.pdf` with a newer file (keep the same name). |
 
 **Project list thumbnails:** each row on the home page has a colored placeholder labeled with
-a filename (`cfa.jpg`, `amex.jpg`, etc.). To use a real image, open `index.html`, find that
+a filename (`amex.jpg`, `marta.jpg`, etc.). To use a real image, open `index.html`, find that
 project's `work-item__media`, and replace the inner placeholder with an image, e.g.:
 ```html
-<span class="work-item__media"><img src="assets/img/cfa.jpg" alt="Chick-fil-A order flow"></span>
+<span class="work-item__media"><img src="assets/img/amex.jpg" alt="Amex Travel booking flow"></span>
 ```
 
 **Don't want the "swap me" notes to show?** They live inside the gray placeholders and the
