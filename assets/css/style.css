@@ -641,7 +641,8 @@ body:not(.theme-light) :is(
 }
 .hero__title, .cs-hero__title, .work-item__title, .h-lg, .cs-block__body h2 { line-height: 1.12; }
 /* give script descenders & flourishes room inside the masked reveal lines */
-.mask-line > * { padding: 0.16em 0.15em 0.22em 0.08em; margin: -0.16em 0 -0.22em -0.08em; }
+.mask-line > * { padding: 0.22em 0.25em 0.26em 0.12em; margin: 0; }
+.mask-line { margin: -0.22em -0.25em -0.26em -0.12em; }
 .cs-hero__title, .contact__big a { padding-bottom: 0.12em; }
 
 /* ---------- 16. ENTRY DOOR CARDS (3-up) ---------- */
