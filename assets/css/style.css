@@ -680,3 +680,9 @@ body:not(.theme-light) :is(
 .cat-card .ph, .cat-card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
 .cat-card figcaption { font-family: var(--mono); font-size: 13.5px; color: var(--muted); padding: 16px 18px; }
 @media (max-width: 760px) { .cats-grid { grid-template-columns: 1fr; } }
+
+/* ---------- 15b. BLOCK-FONT CORRECTIONS (script is for headers only) ---------- */
+:root { --block: "Syne", "Arial Black", sans-serif; }
+.marquee__track span { font-family: var(--block); }
+.work-more__logos li { font-family: var(--block); }
+.work-item__title { font-family: var(--block); font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1.02; }
