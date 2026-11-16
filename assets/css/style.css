@@ -629,3 +629,54 @@ body:not(.theme-light) :is(
 @media (max-width: 760px) {
   .work-item--door { grid-template-columns: auto 1fr; grid-template-areas: "num main"; }
 }
+
+/* ---------- 15. SOFTER DISPLAY FACE — Great Vibes pass ---------- */
+:root { --display: "Great Vibes", "Syne", cursive; }
+.display, .hero__title, .cs-hero__title, .work-item__title, .work-more__title,
+.h-xl, .h-lg, .contact__big a, .cs-block__body h2, .nav__brand {
+  font-family: var(--display);
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+.hero__title, .cs-hero__title, .work-item__title, .h-lg, .cs-block__body h2 { line-height: 1.12; }
+/* give script descenders & flourishes room inside the masked reveal lines */
+.mask-line > * { padding: 0.16em 0.15em 0.22em 0.08em; margin: -0.16em 0 -0.22em -0.08em; }
+.cs-hero__title, .contact__big a { padding-bottom: 0.12em; }
+
+/* ---------- 16. ENTRY DOOR CARDS (3-up) ---------- */
+.door-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.5vw, 32px); }
+.door-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--bg); transition: transform .45s var(--ease), border-color .3s, box-shadow .45s var(--ease); }
+.door-card:hover { transform: translateY(-6px); border-color: var(--accent); box-shadow: 0 22px 54px rgba(10,10,15,0.14); }
+.door-card__img { position: relative; aspect-ratio: 16/10; overflow: hidden; border-bottom: 1px solid var(--line); }
+.door-card__img img, .door-card__img .ph { width: 100%; height: 100%; object-fit: cover; display: block; }
+@media (hover: hover) {
+  .door-card__img::after { content: ""; position: absolute; inset: 0; background: var(--accent); opacity: 0.55; transition: opacity .5s var(--ease); pointer-events: none; }
+  .door-card:hover .door-card__img::after { opacity: 0; }
+}
+.door-card__body { padding: clamp(20px, 2.4vw, 30px); display: flex; flex-direction: column; gap: 14px; flex: 1; }
+.door-card__num { font-family: var(--mono); font-size: 13px; color: var(--accent); letter-spacing: 0.12em; }
+.door-card__title { font-family: var(--display); font-weight: 400; font-size: clamp(1.7rem, 2.6vw, 2.4rem); line-height: 1.15; color: var(--fg); padding-bottom: 0.1em; }
+.door-card__desc { font-size: 15px; line-height: 1.6; color: var(--muted); }
+.door-card .door-titles { margin-top: auto; padding-top: 4px; }
+.door-card__go { font-family: var(--mono); font-size: 13px; letter-spacing: 0.08em; color: var(--accent); }
+@media (max-width: 860px) { .door-grid { grid-template-columns: 1fr; } }
+
+/* ---------- 17. HERO NOTE BANNER (home, easily editable) ---------- */
+.hero-note { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--line-2); border-radius: 100px; padding: 9px 18px; margin-bottom: 30px; }
+.hero-note::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; animation: hero-note-pulse 2.2s ease-in-out infinite; }
+@keyframes hero-note-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+
+/* ---------- 18. CAT AT THE BOTTOM 🐈‍⬛ ---------- */
+.cat-peek { position: fixed; right: 20px; bottom: 18px; z-index: 1200; width: 54px; height: 54px; border-radius: 50%; background: var(--accent); color: #0a0a0d; display: grid; place-items: center; box-shadow: 0 10px 26px rgba(0,0,0,0.3); transform: translateY(140%) rotate(8deg); transition: transform .5s var(--ease); }
+.cat-peek.show { transform: translateY(0) rotate(0deg); }
+.cat-peek:hover { transform: translateY(-4px) rotate(-6deg); }
+.cat-peek svg { width: 30px; height: 30px; display: block; }
+@media (prefers-reduced-motion: reduce) { .cat-peek { transition: none; } .hero-note::before { animation: none; } }
+
+/* ---------- 19. CATS PAGE ---------- */
+.cats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.5vw, 32px); }
+.cat-card { border: 1px solid var(--line); border-radius: var(--radius-lg); overflow: hidden; background: var(--bg); }
+.cat-card .ph, .cat-card img { width: 100%; aspect-ratio: 4/5; object-fit: cover; display: block; }
+.cat-card figcaption { font-family: var(--mono); font-size: 13.5px; color: var(--muted); padding: 16px 18px; }
+@media (max-width: 760px) { .cats-grid { grid-template-columns: 1fr; } }
