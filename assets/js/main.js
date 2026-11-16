@@ -297,7 +297,7 @@
   "use strict";
   if (/cats\.html$/.test(location.pathname)) return;
   const cssLink = document.querySelector('link[rel="stylesheet"][href*="style.css"]');
-  const prefix = cssLink ? cssLink.getAttribute("href").replace("assets/css/style.css", "") : "";
+  const prefix = cssLink ? cssLink.getAttribute("href").split("?")[0].replace("assets/css/style.css", "") : "";
   const cat = document.createElement("a");
   cat.className = "cat-peek";
   cat.href = prefix + "cats.html";

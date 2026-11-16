@@ -663,7 +663,8 @@ body:not(.theme-light) :is(
 @media (max-width: 860px) { .door-grid { grid-template-columns: 1fr; } }
 
 /* ---------- 17. HERO NOTE BANNER (home, easily editable) ---------- */
-.hero-note { display: inline-flex; align-items: center; gap: 10px; font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--line-2); border-radius: 100px; padding: 9px 18px; margin-bottom: 30px; }
+.hero-note { display: flex; width: fit-content; align-items: center; gap: 10px; font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--line-2); border-radius: 100px; padding: 9px 18px; margin-bottom: 30px; }
+.hero-note { margin-bottom: 34px; }
 .hero-note::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; animation: hero-note-pulse 2.2s ease-in-out infinite; }
 @keyframes hero-note-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
@@ -672,7 +673,8 @@ body:not(.theme-light) :is(
 .cat-peek.show { transform: translateY(0) rotate(0deg); }
 .cat-peek:hover { transform: translateY(-4px) rotate(-6deg); }
 .cat-peek svg { width: 30px; height: 30px; display: block; }
-@media (prefers-reduced-motion: reduce) { .cat-peek { transition: none; } .hero-note::before { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .cat-peek { transition: none; } .hero-note { margin-bottom: 34px; }
+.hero-note::before { animation: none; } }
 
 /* ---------- 19. CATS PAGE ---------- */
 .cats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(18px, 2.5vw, 32px); }
@@ -695,4 +697,5 @@ body:not(.theme-light) :is(
 .theme-light .cs-hero__title { font-family: var(--block); font-weight: 700; letter-spacing: -0.02em; line-height: 1.04; }
 .cs-next__title { font-family: var(--block); font-weight: 700; letter-spacing: -0.01em; }
 /* "Wondering what else I've done?" — question on one line, break before the ask */
-.work-more__title { white-space: nowrap; font-size: clamp(1.5rem, 4.2vw, 2.6rem); }
+.work-more__title { font-size: clamp(1.5rem, 4.2vw, 2.6rem); }
+.work-more__title--nowrap { white-space: nowrap; }
