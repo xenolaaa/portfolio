@@ -703,3 +703,6 @@ body:not(.theme-light) :is(
 /* path headers in block, too */
 .door-card__title { font-family: var(--block); font-weight: 700; letter-spacing: -0.01em; }
 .t-block { font-family: var(--block); font-weight: 700; letter-spacing: -0.02em; line-height: 1.04; }
+
+/* Fix: hero gradient word must stay inline so the hero never wraps */
+.hero__title .l1 span { display: inline; }
