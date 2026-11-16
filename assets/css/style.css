@@ -690,3 +690,9 @@ body:not(.theme-light) :is(
 /* hero headline: never wrap — one line at every width */
 .hero__title { white-space: nowrap; }
 .hero__title.h-xl { font-size: clamp(2rem, 7vw, 5.5rem); }
+
+/* block font where multi-caps words live (project titles, next-project links) */
+.theme-light .cs-hero__title { font-family: var(--block); font-weight: 700; letter-spacing: -0.02em; line-height: 1.04; }
+.cs-next__title { font-family: var(--block); font-weight: 700; letter-spacing: -0.01em; }
+/* "Wondering what else I've done?" — question on one line, break before the ask */
+.work-more__title { white-space: nowrap; font-size: clamp(1.5rem, 4.2vw, 2.6rem); }
