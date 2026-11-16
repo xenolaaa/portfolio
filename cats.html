@@ -6,84 +6,41 @@
   <script>document.documentElement.classList.add('js')</script>
   <meta name="darkreader-lock" />
   <title>The Supervisors · La Schaffer</title>
-  <meta name="description" content="You found the cats. There are three. They contributed nothing and deserve everything." />
+  <meta name="description" content="You found the cats. Garnet, Breeze & Hex. They contributed nothing and deserve everything." />
   <meta name="robots" content="noindex" />
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Syne:wght@600;700;800&family=Space+Grotesk:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/style.css?v=1117" />
+  <style>
+    .cats-only { min-height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: clamp(36px, 6vh, 64px); padding: 48px var(--gutter); }
+    .cats-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(24px, 4vw, 56px); width: 100%; max-width: 980px; }
+    .cats-row figure { text-align: center; margin: 0; }
+    .cats-row img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; border: 2px solid var(--line-2); display: block; }
+    .cats-row figcaption { font-family: var(--display); font-size: clamp(1.9rem, 3.4vw, 2.6rem); color: var(--fg); margin-top: 18px; padding-bottom: 0.15em; }
+    @media (max-width: 640px) and (orientation: portrait) { .cats-row { grid-template-columns: 1fr; max-width: 320px; } }
+  </style>
 </head>
 <body data-accent="green">
-  <a class="skip" href="#cats">Skip to the cats</a>
-
-  <header class="nav">
-    <a class="nav__brand" href="index.html" aria-label="La Schaffer — home">La Schaffer<span class="dot">.</span></a>
-    <nav class="nav__links" aria-label="Primary">
-      <a href="index.html">Paths</a>
-      <a href="about.html">About</a>
-      <a href="assets/la-schaffer-resume.pdf" target="_blank" rel="noopener">Résumé</a>
-      <a class="btn btn--accent" href="about.html#contact" data-magnetic="0.25">Let’s talk</a>
-    </nav>
-  </header>
-
-  <main id="top">
-    <section class="cs-hero container">
-      <div class="cs-hero__glow" aria-hidden="true"></div>
-      <div class="cs-hero__inner">
-        <p class="cs-hero__num reveal">You scrolled all the way down. This is your reward.</p>
-        <h1 class="display cs-hero__title reveal reveal-d1">The Supervisors</h1>
-        <p class="cs-hero__sub reveal reveal-d2">Every project on this site was completed under the close, unblinking supervision of three senior stakeholders. They contributed nothing. They deserve everything.</p>
-      </div>
-    </section>
-
-    <section class="band theme-light" id="cats" data-accent="green">
-      <div class="section container">
-      <div class="sec-head reveal">
-        <div>
-          <h2 class="eyebrow">The team</h2>
-        </div>
-        <p class="sec-head__index">Performance reviews: flawless</p>
-      </div>
-
-      <div class="cats-grid">
-        <!-- ★ Drop photos in as assets/img/cats/cat-1.jpg, cat-2.jpg, cat-3.jpg — and fix their names/titles below ★ -->
-        <figure class="cat-card reveal">
-          <img src="assets/img/cats/cat-1.jpg" alt="Cat number one" loading="lazy" onerror="this.outerHTML='<span class=&quot;ph&quot;></span>'" />
-          <figcaption>Cat 01 — Name TBD · Chief Nap Officer</figcaption>
-        </figure>
-        <figure class="cat-card reveal reveal-d1">
-          <img src="assets/img/cats/cat-2.jpg" alt="Cat number two" loading="lazy" onerror="this.outerHTML='<span class=&quot;ph&quot;></span>'" />
-          <figcaption>Cat 02 — Name TBD · Director of Keyboard Interference</figcaption>
-        </figure>
-        <figure class="cat-card reveal reveal-d2">
-          <img src="assets/img/cats/cat-3.jpg" alt="Cat number three" loading="lazy" onerror="this.outerHTML='<span class=&quot;ph&quot;></span>'" />
-          <figcaption>Cat 03 — Name TBD · VP, Quality Assurance (Sitting on It)</figcaption>
-        </figure>
-      </div>
-      </div>
-    </section>
-
-    <section class="band" data-accent="green">
-      <div class="section container contact">
-      <p class="eyebrow reveal" style="justify-content:center">Okay, back to business</p>
-      <h2 class="contact__big reveal reveal-d1" style="margin-top:24px">
-        <a href="about.html#contact" data-magnetic="0.15">Hire their human ↘</a>
-      </h2>
-      <p class="lead reveal reveal-d2" style="margin:32px auto 0;text-align:center">
-        They have opinions about my next gig. Mostly that it should fund more treats.
-      </p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container footer__row">
-      <span>© <span data-year>2026</span> Lauren (La) Schaffer — Designed &amp; built using Claude. 🧡</span>
-      <a href="index.html#paths">All paths</a>
-      <a href="#top">Back to top ↑</a>
+  <main class="cats-only" id="top" aria-label="The cats: Garnet, Breeze, and Hex">
+    <div class="cats-row">
+      <figure class="reveal">
+        <img src="assets/img/cats/garnet.jpg" alt="Garnet the cat" />
+        <figcaption>Garnet</figcaption>
+      </figure>
+      <figure class="reveal reveal-d1">
+        <img src="assets/img/cats/breeze.jpg" alt="Breeze the cat" />
+        <figcaption>Breeze</figcaption>
+      </figure>
+      <figure class="reveal reveal-d2">
+        <img src="assets/img/cats/hex.jpg" alt="Hex the cat" />
+        <figcaption>Hex</figcaption>
+      </figure>
     </div>
-  </footer>
+
+    <a class="btn reveal reveal-d3" href="index.html" data-magnetic="0.3">← Home</a>
+  </main>
 
   <script src="assets/js/main.js?v=1117"></script>
 </body>
