@@ -699,3 +699,7 @@ body:not(.theme-light) :is(
 /* "Wondering what else I've done?" — question on one line, break before the ask */
 .work-more__title { font-size: clamp(1.5rem, 4.2vw, 2.6rem); }
 .work-more__title--nowrap { white-space: nowrap; }
+
+/* path headers in block, too */
+.door-card__title { font-family: var(--block); font-weight: 700; letter-spacing: -0.01em; }
+.t-block { font-family: var(--block); font-weight: 700; letter-spacing: -0.02em; line-height: 1.04; }
