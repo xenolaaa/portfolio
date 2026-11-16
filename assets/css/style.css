@@ -621,3 +621,11 @@ body:not(.theme-light) :is(
   .section, .band, .cs-section, .cs-hero { padding-block: 14px !important; min-height: 0 !important; }
   .work-item, figure, .cs-figure, .stat, .fact { break-inside: avoid; }
 }
+
+/* ---------- 14. PATHS — IAAPA entry doors + lane pages ---------- */
+.work-item--door { grid-template-columns: 52px minmax(0,1fr) 56px; grid-template-areas: "num main cta"; }
+.door-titles { display: block; font-family: var(--mono); font-size: 13px; color: var(--muted); margin-top: 14px; line-height: 1.6; }
+.door-titles strong { color: var(--accent); font-weight: 500; }
+@media (max-width: 760px) {
+  .work-item--door { grid-template-columns: auto 1fr; grid-template-areas: "num main"; }
+}
