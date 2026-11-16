@@ -686,3 +686,7 @@ body:not(.theme-light) :is(
 .marquee__track span { font-family: var(--block); }
 .work-more__logos li { font-family: var(--block); }
 .work-item__title { font-family: var(--block); font-weight: 700; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1.02; }
+
+/* hero headline: never wrap — one line at every width */
+.hero__title { white-space: nowrap; }
+.hero__title.h-xl { font-size: clamp(2rem, 7vw, 5.5rem); }
