@@ -259,7 +259,7 @@ body:not(.theme-light) :is(
 @media (min-width: 721px) { .nav-overlay { display: none; } }
 
 /* ---------- 7. HERO ---------- */
-.hero { position: relative; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; padding-block: 140px 60px; }
+.hero { position: relative; min-height: calc(100svh - 150px); display: flex; flex-direction: column; justify-content: flex-start; padding-block: 108px 56px; }
 /* Full-bleed gradient layer — spans the whole viewport width, responsively,
    instead of being clipped to the 1280px content container. */
 .hero__bg {
@@ -315,7 +315,7 @@ body:not(.theme-light) :is(
 @keyframes scrollbar { 0%{transform:translateX(-100%)} 60%,100%{transform:translateX(100%)} }
 
 @media (max-width: 640px) {
-  .hero { justify-content: flex-end; min-height: 90svh; padding-block: 118px 44px; }
+  .hero { justify-content: flex-start; min-height: calc(100svh - 160px); padding-block: 92px 40px; }
   .hero__scroll { display: none; }
   .hero__glow { width: 90vw; height: 90vw; top: -6%; }
 }
@@ -665,7 +665,7 @@ body:not(.theme-light) :is(
 
 /* ---------- 17. HERO NOTE BANNER (home, easily editable) ---------- */
 .hero-note { display: flex; width: fit-content; align-items: center; gap: 10px; font-family: var(--mono); font-size: 13px; letter-spacing: 0.05em; color: var(--muted); border: 1px solid var(--line-2); border-radius: 100px; padding: 9px 18px; margin-bottom: 30px; }
-.hero-note { margin-bottom: 34px; }
+.hero-note { margin-bottom: 24px; }
 .hero-note::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0; animation: hero-note-pulse 2.2s ease-in-out infinite; }
 @keyframes hero-note-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
@@ -707,3 +707,7 @@ body:not(.theme-light) :is(
 
 /* Fix: hero gradient word must stay inline so the hero never wraps */
 .hero__title .l1 span { display: inline; }
+
+/* Cinched hero rhythm */
+.hero__eyebrow { line-height: 1.35; }
+.hero__title.h-xl { margin-top: 14px; }
