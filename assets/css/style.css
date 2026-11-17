@@ -746,3 +746,9 @@ html { scroll-behavior: smooth; }
 
 /* Gradient text (.l2) paints only inside its own box — pad it so script descenders/swashes aren't cropped */
 .hero__title .l2 { padding: 0.15em 0.12em 0.35em 0.08em; margin: -0.15em -0.12em -0.35em -0.08em; }
+
+/* ---------- Photo carousel & case-study video ---------- */
+.carousel { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding-bottom:10px; scrollbar-width:thin; }
+.carousel img { height:clamp(220px,34vw,360px); width:auto; flex:0 0 auto; scroll-snap-align:center; border-radius:var(--radius); }
+.carousel:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
+.cs-video { width:100%; border-radius:var(--radius); display:block; background:#000; }

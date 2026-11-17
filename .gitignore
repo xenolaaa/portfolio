@@ -1,15 +1,20 @@
-# macOS
 .DS_Store
-**/.DS_Store
-
-# Internal source files — kept locally, NOT published to the web
-*.key
-*.docx
-*.webp
-
-# Original image drops (superseded by the resized web-ready versions beside them)
-**/Screen Shot*
-**/Screenshot*
-**/6920*
-**/MC0[0-9].png
-**/3de8cc*
+# raw photo/video dumps — web-sized picks are saved under their final names
+assets/img/bel-rev/PXL_*
+assets/img/bel-rev/TRAV*.MP4
+assets/img/bel-rev/Recap *.mp4
+assets/img/bel-rev/*.zip
+assets/img/vavianna/HELL*.jpg
+assets/img/vavianna/HLLE*.jpg
+assets/img/vavianna/ILLU*.jpg
+assets/img/vavianna/*.ai
+assets/img/vavianna/*.pptx
+assets/img/vavianna/*.pdf
+assets/img/vavianna/drive-download*
+assets/img/clue/IMG_*.jpeg
+assets/img/clue/clue*.jpeg
+assets/img/clue/*.ai
+assets/img/clue/*.pdf
+assets/img/clue/Swan House - First Floor.jpg
+assets/img/dads-garage/*.webp
+assets/img/arthritis-foundation/*.docx
