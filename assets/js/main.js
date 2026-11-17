@@ -313,3 +313,11 @@
   window.addEventListener("resize", onScroll, { passive: true });
   onScroll();
 })();
+
+/* Cross-page anchors: make sure #hash targets actually get scrolled to */
+if (location.hash) {
+  window.addEventListener("load", () => {
+    const t = document.getElementById(location.hash.slice(1));
+    if (t) setTimeout(() => t.scrollIntoView({ block: "start" }), 60);
+  });
+}

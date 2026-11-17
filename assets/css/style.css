@@ -212,7 +212,7 @@ body:not(.theme-light) :is(
 }
 .nav.hidden { transform: translateY(-110%); }
 .nav__brand {
-  font-family: var(--display); font-weight: 800; font-size: 20px;
+  font-family: var(--display); font-weight: 800; font-size: 26px;
   letter-spacing: -0.02em; display: inline-flex; align-items: center; gap: 8px;
   white-space: nowrap;
 }
@@ -245,7 +245,7 @@ body:not(.theme-light) :is(
 }
 .nav-overlay.open { opacity: 1; pointer-events: auto; transform: none; }
 .nav-overlay a {
-  font-family: var(--display); font-weight: 800; text-transform: uppercase;
+  font-family: var(--block); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em;
   font-size: clamp(2rem, 11vw, 3.6rem); line-height: 1.2; color: var(--fg);
   display: flex; align-items: baseline; gap: 14px; transition: color .3s;
 }
@@ -525,7 +525,7 @@ body:not(.theme-light) :is(
 .cs-block__label { font-family: var(--mono); font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); position: sticky; top: 100px; }
 .cs-block__body p { color: var(--text-2); max-width: 66ch; }
 .cs-block__body p + p { margin-top: 20px; }
-.cs-block__body h2 { font-size: clamp(1.6rem, 4vw, 2.6rem); text-transform: uppercase; margin-bottom: 22px; }
+.cs-block__body h2 { font-size: clamp(2rem, 4.6vw, 3.1rem); text-transform: uppercase; margin-bottom: 22px; }
 .cs-block__body .lead { color: var(--fg); }
 
 .cs-list { margin-top: 24px; display: grid; gap: 2px; }
@@ -698,7 +698,7 @@ body:not(.theme-light) :is(
 .theme-light .cs-hero__title { font-family: var(--block); font-weight: 700; letter-spacing: -0.02em; line-height: 1.04; }
 .cs-next__title { font-family: var(--block); font-weight: 700; letter-spacing: -0.01em; }
 /* "Wondering what else I've done?" — question on one line, break before the ask */
-.work-more__title { font-size: clamp(1.5rem, 4.2vw, 2.6rem); }
+.work-more__title { font-size: clamp(2rem, 5vw, 3.2rem); }
 .work-more__title--nowrap { white-space: nowrap; }
 
 /* path headers in block, too */
@@ -718,14 +718,14 @@ body:not(.theme-light) :is(
 
 /* Brand tagline in the nav (home) */
 .nav__tag {
-  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
+  font-family: var(--mono); font-size: 13px; letter-spacing: 0.14em;
   text-transform: uppercase; color: var(--muted); font-weight: 700;
   margin-left: 14px; padding-left: 14px; border-left: 1px solid var(--line-2);
   white-space: nowrap;
 }
 @media (max-width: 640px) {
   .nav__brand { display: inline-flex; flex-wrap: wrap; align-items: baseline; row-gap: 2px; }
-  .nav__tag { flex-basis: 100%; margin-left: 0; padding-left: 0; border-left: 0; font-size: 9.5px; letter-spacing: 0.12em; }
+  .nav__tag { flex-basis: 100%; margin-left: 0; padding-left: 0; border-left: 0; font-size: 11px; letter-spacing: 0.12em; }
 }
 
 /* Balance the slack: space above the title == space below the CTAs */
