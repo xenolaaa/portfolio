@@ -259,7 +259,7 @@ body:not(.theme-light) :is(
 @media (min-width: 721px) { .nav-overlay { display: none; } }
 
 /* ---------- 7. HERO ---------- */
-.hero { position: relative; min-height: calc(100svh - 150px); display: flex; flex-direction: column; justify-content: flex-start; padding-block: 108px 56px; }
+.hero { position: relative; min-height: calc(100svh - var(--marquee-h)); display: flex; flex-direction: column; justify-content: flex-start; padding-block: 108px 56px; }
 /* Full-bleed gradient layer — spans the whole viewport width, responsively,
    instead of being clipped to the 1280px content container. */
 .hero__bg {
@@ -315,7 +315,7 @@ body:not(.theme-light) :is(
 @keyframes scrollbar { 0%{transform:translateX(-100%)} 60%,100%{transform:translateX(100%)} }
 
 @media (max-width: 640px) {
-  .hero { justify-content: flex-start; min-height: calc(100svh - 160px); padding-block: 92px 40px; }
+  .hero { justify-content: flex-start; min-height: calc(100svh - var(--marquee-h)); padding-block: 92px 40px; }
   .hero__scroll { display: none; }
   .hero__glow { width: 90vw; height: 90vw; top: -6%; }
 }
@@ -711,3 +711,7 @@ body:not(.theme-light) :is(
 /* Cinched hero rhythm */
 .hero__eyebrow { line-height: 1.35; }
 .hero__title.h-xl { margin-top: 14px; }
+
+/* Hero + marquee exactly fill the first viewport at any window size */
+:root { --marquee-h: calc(clamp(1.4rem, 3vw, 2.4rem) * 1.2 + 46px); }
+.marquee__track span { line-height: 1.2; }
