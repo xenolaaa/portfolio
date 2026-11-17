@@ -752,3 +752,7 @@ html { scroll-behavior: smooth; }
 .carousel img { height:clamp(220px,34vw,360px); width:auto; flex:0 0 auto; scroll-snap-align:center; border-radius:var(--radius); }
 .carousel:focus-visible { outline:2px solid var(--accent); outline-offset:4px; }
 .cs-video { width:100%; border-radius:var(--radius); display:block; background:#000; }
+
+/* Hero line: extra descender room for the script y (and compensate the clip box) */
+.hero__title .mask-line > * { padding-bottom: 0.5em; }
+.hero__title .mask-line { margin-bottom: -0.5em; }

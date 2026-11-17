@@ -278,7 +278,18 @@
     });
   })();
 
-  /* Anchor scrolling is native now (CSS scroll-behavior). */
+  /* Anchor clicks: scroll without navigation so it works even in sandboxed previews */
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    const id = a.getAttribute("href");
+    if (id.length < 2) return;
+    const target = document.getElementById(id.slice(1));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
+    try { history.replaceState(null, "", id); } catch (err) {}
+  });
 })();
 
 /* ---------- CAT AT THE BOTTOM 🐈‍⬛ — scroll to the end, meet the supervisors ---------- */
@@ -309,4 +320,8 @@ if (location.hash) {
     const t = document.getElementById(location.hash.slice(1));
     if (t) setTimeout(() => t.scrollIntoView({ block: "start" }), 60);
   });
+} else {
+  /* No anchor: always start cross-page navigations at the top */
+  try { if ("scrollRestoration" in history) history.scrollRestoration = "manual"; } catch (e) {}
+  window.addEventListener("pageshow", () => scrollTo(0, 0));
 }
