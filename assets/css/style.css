@@ -727,3 +727,8 @@ body:not(.theme-light) :is(
   .nav__brand { display: inline-flex; flex-wrap: wrap; align-items: baseline; row-gap: 2px; }
   .nav__tag { flex-basis: 100%; margin-left: 0; padding-left: 0; border-left: 0; font-size: 9.5px; letter-spacing: 0.12em; }
 }
+
+/* Balance the slack: space above the title == space below the CTAs */
+.hero__inner { display: flex; flex-direction: column; flex: 1; }
+.hero__title.h-xl { margin-top: auto; }
+.hero__cta { margin-bottom: auto; }
