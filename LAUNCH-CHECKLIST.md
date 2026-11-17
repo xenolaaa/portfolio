@@ -21,9 +21,14 @@ Save each image with EXACTLY this filename, in the folder shown. JPG, reasonable
 - [ ] `assets/img/clue/scene-2.jpg` — production still, 16:10
 
 ### Bèl Rèv — `assets/img/bel-rev/`
-(already have: dreamers.jpg, stage.jpg — used on home page doors)
 - [ ] `assets/img/bel-rev/seating-map.jpg` — the seating/ops map (a real ops artifact!)
 - [ ] `assets/img/bel-rev/night-of.jpg` — volunteers / service in motion
+
+**To replace (just overwrite the file with the same name — no code changes needed):**
+- [ ] `assets/img/bel-rev/dreamers.jpg` — **the Path 01 card photo on the home page** (also the Bèl Rèv page hero + immersive path tile). Landscape, ~16:10.
+- [ ] `assets/img/bel-rev/stage.jpg` — **the Path 03 card photo on the home page** (also used on the production path page). Landscape, ~16:10.
+
+> Same trick works for ANY photo already on the site: save your new image over the old filename and it swaps in everywhere that file is used. (The MARTA Path 02 photo is `assets/img/marta/hero-station.jpg` if you ever want to swap that one too.)
 
 ### Dad's Garage — `assets/img/dads-garage/`
 - [ ] `assets/img/dads-garage/house.jpg` — lobby, house, or marquee shot
