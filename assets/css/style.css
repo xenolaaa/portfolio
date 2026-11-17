@@ -745,7 +745,7 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* Gradient text (.l2) paints only inside its own box — pad it so script descenders/swashes aren't cropped */
-.hero__title .l2 { padding: 0.15em 0.12em 0.35em 0.08em; margin: -0.15em -0.12em -0.35em -0.08em; }
+.hero__title .l2 { padding: 0.15em 0.12em 0.35em 0.3em; margin: -0.15em -0.12em -0.35em -0.3em; }
 
 /* ---------- Photo carousel & case-study video ---------- */
 .carousel { display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; padding-bottom:10px; scrollbar-width:thin; }
