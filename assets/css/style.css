@@ -734,7 +734,7 @@ body:not(.theme-light) :is(
 .hero__cta { margin-bottom: auto; }
 
 /* Room for the centered cat below the footer links */
-.footer { padding-bottom: 86px; }
+.footer { padding-bottom: 120px; }
 
 /* A11y: comfortable touch targets for small inline links (WCAG 2.5.8) */
 .nav__links a:not(.btn) { padding-block: 10px; }

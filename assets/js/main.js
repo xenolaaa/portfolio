@@ -295,7 +295,7 @@
   cat.innerHTML = '<svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M6 13 L4 4 L12 8 Q16 6.6 20 8 L28 4 L26 13 Q29 17 28 21 Q26.5 28 16 28 Q5.5 28 4 21 Q3 17 6 13 Z"/><circle cx="11.5" cy="17" r="1.8" fill="#f4f3ee"/><circle cx="20.5" cy="17" r="1.8" fill="#f4f3ee"/><path d="M14.6 21.5 Q16 23 17.4 21.5" stroke="#f4f3ee" stroke-width="1.4" fill="none" stroke-linecap="round"/></svg>';
   document.body.appendChild(cat);
   const onScroll = () => {
-    const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 90;
+    const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 6;
     cat.classList.toggle("show", nearBottom);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
