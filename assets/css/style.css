@@ -315,7 +315,7 @@ body:not(.theme-light) :is(
 @keyframes scrollbar { 0%{transform:translateX(-100%)} 60%,100%{transform:translateX(100%)} }
 
 @media (max-width: 640px) {
-  .hero { justify-content: flex-start; min-height: calc(100svh - var(--marquee-h)); padding-block: 92px 40px; }
+  .hero { justify-content: flex-start; min-height: calc(100svh - var(--marquee-h)); padding-block: 128px 40px; }
   .hero__scroll { display: none; }
   .hero__glow { width: 90vw; height: 90vw; top: -6%; }
 }
@@ -715,3 +715,15 @@ body:not(.theme-light) :is(
 /* Hero + marquee exactly fill the first viewport at any window size */
 :root { --marquee-h: calc(clamp(1.4rem, 3vw, 2.4rem) * 1.2 + 46px); }
 .marquee__track span { line-height: 1.2; }
+
+/* Brand tagline in the nav (home) */
+.nav__tag {
+  font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--muted); font-weight: 700;
+  margin-left: 14px; padding-left: 14px; border-left: 1px solid var(--line-2);
+  white-space: nowrap;
+}
+@media (max-width: 640px) {
+  .nav__brand { display: inline-flex; flex-wrap: wrap; align-items: baseline; row-gap: 2px; }
+  .nav__tag { flex-basis: 100%; margin-left: 0; padding-left: 0; border-left: 0; font-size: 9.5px; letter-spacing: 0.12em; }
+}
