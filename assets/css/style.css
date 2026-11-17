@@ -670,9 +670,9 @@ body:not(.theme-light) :is(
 @keyframes hero-note-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
 
 /* ---------- 18. CAT AT THE BOTTOM 🐈‍⬛ ---------- */
-.cat-peek { position: fixed; right: 20px; bottom: 18px; z-index: 1200; width: 54px; height: 54px; border-radius: 50%; background: var(--accent); color: #0a0a0d; display: grid; place-items: center; box-shadow: 0 10px 26px rgba(0,0,0,0.3); transform: translateY(140%) rotate(8deg); transition: transform .5s var(--ease); }
-.cat-peek.show { transform: translateY(0) rotate(0deg); }
-.cat-peek:hover { transform: translateY(-4px) rotate(-6deg); }
+.cat-peek { position: fixed; left: 50%; bottom: -6px; z-index: 1200; width: 58px; height: 58px; border-radius: 50%; background: var(--accent); color: #0a0a0d; display: grid; place-items: center; box-shadow: 0 10px 26px rgba(0,0,0,0.3); transform: translate(-50%, 160%) rotate(14deg); transition: transform .5s var(--ease); }
+.cat-peek.show { transform: translate(-50%, 0) rotate(0deg); }
+.cat-peek:hover { transform: translate(-50%, -8px) rotate(-8deg); }
 .cat-peek svg { width: 30px; height: 30px; display: block; }
 @media (prefers-reduced-motion: reduce) { .cat-peek { transition: none; } .hero-note { margin-bottom: 34px; }
 .hero-note::before { animation: none; } }
@@ -732,3 +732,6 @@ body:not(.theme-light) :is(
 .hero__inner { display: flex; flex-direction: column; flex: 1; }
 .hero__title.h-xl { margin-top: auto; }
 .hero__cta { margin-bottom: auto; }
+
+/* Room for the centered cat below the footer links */
+.footer { padding-bottom: 86px; }
