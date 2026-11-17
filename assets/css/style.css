@@ -735,3 +735,7 @@ body:not(.theme-light) :is(
 
 /* Room for the centered cat below the footer links */
 .footer { padding-bottom: 86px; }
+
+/* A11y: comfortable touch targets for small inline links (WCAG 2.5.8) */
+.nav__links a:not(.btn) { padding-block: 10px; }
+.footer__row a, .footer__row span a, .contact__links a { padding-block: 10px; padding-inline: 4px; display: inline-block; }
