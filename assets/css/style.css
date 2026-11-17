@@ -739,3 +739,7 @@ body:not(.theme-light) :is(
 /* A11y: comfortable touch targets for small inline links (WCAG 2.5.8) */
 .nav__links a:not(.btn) { padding-block: 10px; }
 .footer__row a, .footer__row span a, .contact__links a { padding-block: 10px; padding-inline: 4px; display: inline-block; }
+
+/* Native smooth anchors - no JS needed, works in any sandbox */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

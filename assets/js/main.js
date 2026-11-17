@@ -278,18 +278,7 @@
     });
   })();
 
-  /* ---------- SMOOTH ANCHOR SCROLL (respects reduce) ---------- */
-  $$('a[href^="#"]').forEach(a => {
-    a.addEventListener("click", (e) => {
-      const id = a.getAttribute("href");
-      if (id.length < 2) return;
-      const target = document.getElementById(id.slice(1));
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "start" });
-      history.replaceState(null, "", id);
-    });
-  });
+  /* Anchor scrolling is native now (CSS scroll-behavior). */
 })();
 
 /* ---------- CAT AT THE BOTTOM 🐈‍⬛ — scroll to the end, meet the supervisors ---------- */
