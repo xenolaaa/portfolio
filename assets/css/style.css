@@ -756,3 +756,7 @@ html { scroll-behavior: smooth; }
 /* Hero line: extra descender room for the script y (and compensate the clip box) */
 .hero__title .mask-line > * { padding-bottom: 0.5em; }
 .hero__title .mask-line { margin-bottom: -0.5em; }
+
+/* Photo credits in captions */
+.photo-credit { display:inline-block; opacity:0.65; font-size:0.85em; }
+.photo-credit::before { content:"\00B7\0020"; }
